@@ -1,22 +1,23 @@
+import Card from '../UI/Card';
 import Styles from './AvailableMeals.module.css';
 
 const DUMMY_MEALS = [
     {
       id: 'm1',
-      name: 'Sushi',
-      description: 'Finest fish and veggies',
+      name: 'croissant',
+      description: ' Buttery, flaky, viennoiserie pastry',
       price: 22.99,
     },
     {
       id: 'm2',
-      name: 'Schnitzel',
-      description: 'A german specialty!',
+      name: 'Oatmeal',
+      description: 'Dessert for breakfast',
       price: 16.5,
     },
     {
       id: 'm3',
-      name: 'Barbecue Burger',
-      description: 'American, raw, meaty',
+      name: 'Buddha Bowl',
+      description: 'Rice or whole grains, roasted veggies, a dressing and protein ',
       price: 12.99,
     },
     {
@@ -31,9 +32,7 @@ const AvailableMeals = () => {
     const mealsList = DUMMY_MEALS.map(meal => <li>{meal.name}</li>)
 
     return <section className={Styles.meals}>
-        <ul>
-            {mealsList}
-        </ul>
+        <Card>{mealsList}</Card>
     </section>
 };
 
